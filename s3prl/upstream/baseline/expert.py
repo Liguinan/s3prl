@@ -65,6 +65,7 @@ class UpstreamExpert(UpstreamBase):
         return feats
 
     def forward(self, wavs):
+        # import pdb; pdb.set_trace()
         if "kaldi" in self.config:
             feats = self._extractor_forward(wavs)
         else:
